@@ -70,20 +70,7 @@ export const logout = async () => {
   return { status: 200, data: { message: "Logged out successfully!" } };
 };
 
-export const joinCommunity = async (communityName) => {
-  await delay(500);
-  return { status: 200, data: { message: `Joined community ${communityName}!` } };
-};
-
-export const leaveCommunity = async (communityName) => {
-  await delay(500);
-  return { status: 200, data: { message: `Left community ${communityName}!` } };
-};
-
-export const addModerator = async (communityName, userId) => {
-  await delay(500);
-  return { status: 200, data: { message: `Added user ${userId} as a moderator to ${communityName}!` } };
-};
+// POSTS
 
 export const createPost = async (communityName, content) => {
   await delay(500);
@@ -119,6 +106,8 @@ export const downvotePost = async (postId) => {
   return { status: 200, data: { message: `Post ${postId} downvoted!`, post } };
 };
 
+// Feed
+
 export const getMyFeed = async () => {
   console.log("Fetching feed...");
   // await delay(500); // Simulate network delay
@@ -139,6 +128,8 @@ export const getPopularFeed = async () => {
   return { status: 200, data: { feed: mockData.posts.slice(0, 2) } }; // Example: Top 2 posts
 };
 
+// Communities
+
 export const getCommunities = async () => {
   await delay(500); // Simulate network delay (500ms)
   // Simulated communities data
@@ -153,6 +144,27 @@ export const getCommunities = async () => {
   return { status: 200, data: communities };  // Simulated API response
 };
 
+export const joinCommunity = async (communityName) => {
+  await delay(500);
+  return { status: 200, data: { message: `Joined community ${communityName}!` } };
+};
+
+export const leaveCommunity = async (communityName) => {
+  await delay(500);
+  return { status: 200, data: { message: `Left community ${communityName}!` } };
+};
+
+export const addModerator = async (communityName, userId) => {
+  await delay(500);
+  return { status: 200, data: { message: `Added user ${userId} as a moderator to ${communityName}!` } };
+};
+
+export const getUserRoleInCommunity = async (communityName) => {
+  // Mock function to check if the user is a member or a moderator
+  const userRole = localStorage.getItem("username") === "user1" ? { isMember: true, isModerator: true } : { isMember: false, isModerator: false };
+  return { data: userRole };
+};
+
 export const createCommunity = async (communityName) => {
   // Simulating a delay to mimic a real API call
   await delay(500);  // Adding a small delay to simulate network latency
@@ -165,5 +177,16 @@ export const createCommunity = async (communityName) => {
 
   // Mock response similar to what a real API might return
   return { status: 200, data: newCommunity };
+};
+
+export const getCommunityPosts = async (communityName) => {
+  const mockPosts = [
+    { content: `Post 1 in ${communityName}` },
+    { content: `Post 2 in ${communityName}` },
+    { content: `Post 3 in ${communityName}` },
+  ];
+
+  await delay(500); // Simulating network delay
+  return { data: mockPosts };
 };
 

@@ -66,6 +66,11 @@ const HomePage = () => {
         navigate("/create-community");
     };
 
+    // Redirect to the specific community page
+    const handleCommunityClick = (communityName) => {
+        navigate(`/community/${communityName}`);
+    };
+
 
 
     return (
@@ -83,7 +88,12 @@ const HomePage = () => {
                 <ul>
                     {filteredCommunities.map((community, index) => (
                         <li key={index}>
-                            <span>{community.name} ({community.members} members)</span>
+                            <span
+                                style={{ cursor: 'pointer', color: 'blue' }}
+                                onClick={() => handleCommunityClick(community.name)}
+                            >
+                                {community.name} ({community.members} members)
+                            </span>
                             <button onClick={() => handleJoinCommunity(community.name)}>
                                 Join
                             </button>
