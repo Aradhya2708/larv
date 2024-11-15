@@ -1,0 +1,83 @@
+/* src/styles/LoginPage.css */
+
+/* General page styling */
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a2e; /* Dark blue background */
+    color: #e4e4e4; /* Light gray text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  /* Auth form container */
+  .auth-form-container {
+    background-color: #16213e; /* Slightly lighter blue for form background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  /* Form title */
+  .auth-form-container h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #00a8cc; /* Bright blue text for form title */
+    margin-bottom: 20px;
+  }
+  
+  /* Input fields */
+  .auth-form-container input {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 10px 0;
+    border: 1px solid #00a8cc; /* Bright blue border */
+    border-radius: 4px;
+    background-color: #0f3460; /* Darker blue input background */
+    color: #e4e4e4; /* Light gray text */
+    font-size: 16px;
+  }
+  
+  .auth-form-container input::placeholder {
+    color: #a4b0be; /* Soft gray for placeholder text */
+  }
+  
+  /* Submit button */
+  .auth-form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00a8cc; /* Bright blue button */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .auth-form-container button:hover {
+    background-color: #005f73; /* Darker blue on hover */
+  }
+  
+  /* Additional links (e.g., forgot password) */
+  .auth-form-container .extra-links {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .auth-form-container .extra-links a {
+    color: #00a8cc; /* Bright blue links */
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .auth-form-container .extra-links a:hover {
+    text-decoration: underline;
+  }
+  

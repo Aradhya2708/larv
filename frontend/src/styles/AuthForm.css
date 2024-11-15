@@ -1,0 +1,96 @@
+/* General form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #16213e; /* Dark blue background */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    max-width: 400px; /* Limiting the form width */
+    margin: auto;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  /* Form header styling */
+  form h2 {
+    font-size: 28px;
+    color: #00a8cc; /* Bright blue text for the header */
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  /* Input fields styling */
+  form input {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border: 2px solid #00a8cc; /* Light blue border */
+    border-radius: 5px;
+    background-color: #0f3460; /* Dark background for input */
+    color: #e4e4e4; /* Light gray text */
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Input focus effect */
+  form input:focus {
+    border-color: #66c2ff; /* Lighter blue on focus */
+    box-shadow: 0 0 5px rgba(102, 194, 255, 0.5); /* Light blue glow */
+    outline: none; /* Removing default focus outline */
+  }
+  
+  /* Placeholder text styling */
+  form input::placeholder {
+    color: #a4b0be; /* Soft gray color for placeholder */
+  }
+  
+  /* Submit button styling */
+  form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #00a8cc; /* Bright blue button */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
+  }
+  
+  /* Button hover effect */
+  form button:hover {
+    background-color: #005f73; /* Darker blue on hover */
+    transform: translateY(-2px); /* Button lifts slightly on hover */
+  }
+  
+  /* Button active effect */
+  form button:active {
+    background-color: #00474d; /* Even darker blue when button is pressed */
+    transform: translateY(1px); /* Button appears pressed */
+  }
+  
+  /* Button focus state */
+  form button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 194, 255, 0.5); /* Adding blue shadow on button focus */
+  }
+  
+  /* Adding spacing between form elements */
+  form input, form button {
+    margin-bottom: 15px;
+  }
+  
+  /* Media query for responsiveness on smaller screens */
+  @media (max-width: 480px) {
+    form {
+      width: 90%; /* Ensuring the form doesn't stretch too much on smaller screens */
+    }
+  }
+  

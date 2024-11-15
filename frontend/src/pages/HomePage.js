@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getMyFeed, joinCommunity, leaveCommunity, getCommunities } from "../api.js";
 import Feed from "../components/Feed.js";
+import "../styles/HomePage.css"; // Import the CSS file
 
 const HomePage = () => {
     const [posts, setPosts] = useState([]);
@@ -89,7 +90,7 @@ const HomePage = () => {
                     {filteredCommunities.map((community, index) => (
                         <li key={index}>
                             <span
-                                style={{ cursor: 'pointer', color: 'blue' }}
+                                style={{ cursor: 'pointer', color: 'white' }}
                                 onClick={() => handleCommunityClick(community.name)}
                             >
                                 {community.name} ({community.members} members)

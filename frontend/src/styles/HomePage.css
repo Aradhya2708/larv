@@ -1,0 +1,176 @@
+/* src/styles/HomePage.css */
+
+/* General styling for the page */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a40; /* Deep navy blue background */
+  color: #f8f9fa; /* Off-white text for softer contrast */
+}
+
+/* Container for the entire home page */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #2d2d65; /* Slightly lighter navy blue for the container */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+h1 {
+  font-size: 32px;
+  color: #f4f4ff; /* Light lavender for titles */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  color: #9cafff; /* Soft sky blue for section headers */
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Search bar styling */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #5964e0; /* Soft blue border */
+  border-radius: 6px;
+  background-color: #3a3a75; /* Muted navy background */
+  color: #ffffff; /* White text */
+  box-sizing: border-box;
+}
+
+input[type="text"]::placeholder {
+  color: #a9b5ff; /* Gentle blue placeholder text */
+}
+
+/* Communities list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #4f5ab3; /* Soft lavender border for separation */
+  font-size: 16px;
+  background-color: #2f2f5b; /* Muted navy background for items */
+  color: #ffffff; /* White text */
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+li:hover {
+  background: #404080; /* Brighter navy on hover */
+  transform: translateY(-2px);
+}
+
+/* Community name */
+li span {
+  cursor: pointer;
+  color: #a8d5ff; /* Bright cyan-blue text */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+li span:hover {
+  color: #6fc1ff; /* Softer blue on hover */
+}
+
+/* Buttons for joining/leaving communities */
+button {
+  padding: 8px 14px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:first-of-type {
+  background-color: #38c172; /* Join button: Greenish-blue */
+  color: white;
+}
+
+button:first-of-type:hover {
+  background-color: #2ea85e;
+}
+
+button:last-of-type {
+  background-color: #e74c3c; /* Leave button: Warm red */
+  color: white;
+}
+
+button:last-of-type:hover {
+  background-color: #c0392b;
+}
+
+/* Create Community Button */
+.create-community {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.create-community button {
+  background-color: #5964e0; /* Blue button */
+  color: white;
+  font-size: 16px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.create-community button:hover {
+  background-color: #4852b0; /* Darker blue on hover */
+}
+
+/* Feed Section */
+.feed {
+  margin-top: 30px;
+}
+
+.feed h2 {
+  text-align: left;
+  font-size: 24px;
+  color: #9cafff; /* Soft sky blue text */
+}
+
+.feed .post {
+  padding: 18px;
+  margin-bottom: 15px;
+  background: #2d2d65; /* Dark navy background for posts */
+  border: 1px solid #4f5ab3; /* Lavender border for posts */
+  border-radius: 8px;
+}
+
+.feed .post h3 {
+  font-size: 20px;
+  color: #f4f4ff; /* Light lavender for post titles */
+  margin-bottom: 10px;
+}
+
+.feed .post p {
+  font-size: 14px;
+  color: #d1d6ff; /* Soft blue for post content */
+}
+
+

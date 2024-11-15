@@ -1,6 +1,8 @@
 // src/components/AuthForm.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/AuthForm.css"; // Ensure this is the correct relative path to your CSS file
+
 
 const AuthForm = ({ type, onSubmit }) => {
   const [email, setEmail] = useState("");

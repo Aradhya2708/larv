@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getCommunityPosts, createPost, joinCommunity, leaveCommunity, addModerator } from "../api.js"; // Imported API functions
-
+import "../styles/CommunityPage.css"
 const CommunityPage = () => {
   const { communityName } = useParams(); // Get the community name from the URL
   const [posts, setPosts] = useState([]);

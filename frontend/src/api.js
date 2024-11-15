@@ -189,4 +189,3 @@ export const getCommunityPosts = async (communityName) => {
   await delay(500); // Simulating network delay
   return { data: mockPosts };
 };
-
